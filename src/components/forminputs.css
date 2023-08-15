@@ -1,0 +1,88 @@
+.form-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create two equal-width columns */
+  width: 100%;
+  gap: 35px;
+  margin: 0 auto;
+}
+.forminputs{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input{
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    border : 1px solid gray;
+    border-radius: 5px;
+}
+label{
+    margin-left: 10px;
+    text-align: justify;
+    color: black;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.radioMode{
+    text-align: justify;
+    
+    }
+.grid-1{
+    margin-left: 20px;
+   
+}
+.grid-2{
+    margin-bottom: 20px;
+    margin-right: 22px;
+}
+span{
+    text-align: left;
+    margin-left:10px ;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    color: red;
+    display: none;
+}
+
+input:invalid[focused = "true"]{
+    border: 1px solid red;
+}
+
+input:invalid[focused = "true"] ~ span{
+    display: block;
+}
+
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .form-container {
+      grid-template-columns: 1fr; /* Switch to a single column layout on smaller screens */
+      width: 100%;
+     /* Reset the width to fill the screen */
+    }
+        /* Styles for desktop view */
+        .radioMode {
+            display: flex;
+          flex-direction: column; /* Display radio buttons horizontally on desktop */
+        }
+    .grid-1,
+    .grid-2 {
+    margin: 0; /* Remove margins on both grids for desktop view */
+  }
+  
+  .grid-1 {
+    order: 1; /* Reorder grid-1 on desktop view */
+  }
+  
+  .grid-2 {
+    order: 2; /* Reorder grid-2 on desktop view */
+  }
+
+   .forminputs {
+  display: flex;
+  flex-direction: column;
+}
+        
+  }
+
